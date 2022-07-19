@@ -23,3 +23,13 @@
     color: $white;
     padding: 8px;
 }
+
+//元件 icon大小
+.bmi-icon-size{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-color: $dark-gray;
+    mask: url(/img/BMICLogo.png) no-repeat;
+    mask-size: 100% 100%;
+}

@@ -1,7 +1,7 @@
 *{
     font-family: sans-serif;
 }
-p, span{
+p, span,ul{
     margin: 0;
 }
 
@@ -30,11 +30,16 @@ input:focus{
 }
 
 //padding+margin
+.container{
+    padding: 8px;
+}
+
+
 .margin-lr{
     margin:0px 53px 0px 92px;
 }
-.padding-tb-92px{
-    padding: 92px 0px 92px 0px;
+.padding-tb-74px{
+    padding: 74px 0px 74px 0px;
 }
 
 .padding-bottom-23px{
@@ -45,7 +50,19 @@ input:focus{
     padding-bottom: 8px;
 }
 
+.padding-tb-18px{
+    padding: 18px 0px 18px 0px;
+}
+
+.padding-tb-48px{
+    padding: 48px 0px 48px 0px;
+}
+
 //字級
 .font-size-18px{
     font-size: 18px;
+}
+
+.font-size-24px{
+    font-size: 24px;
 }

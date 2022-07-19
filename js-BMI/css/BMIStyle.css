@@ -6,11 +6,15 @@
   background-color: #424242;
 }
 
+.primary-color-bg {
+  background-color: #FFD366;
+}
+
 * {
   font-family: sans-serif;
 }
 
-p, span {
+p, span, ul {
   margin: 0;
 }
 
@@ -43,12 +47,16 @@ input:focus {
           align-items: center;
 }
 
+.container {
+  padding: 8px;
+}
+
 .margin-lr {
   margin: 0px 53px 0px 92px;
 }
 
-.padding-tb-92px {
-  padding: 92px 0px 92px 0px;
+.padding-tb-74px {
+  padding: 74px 0px 74px 0px;
 }
 
 .padding-bottom-23px {
@@ -59,8 +67,20 @@ input:focus {
   padding-bottom: 8px;
 }
 
+.padding-tb-18px {
+  padding: 18px 0px 18px 0px;
+}
+
+.padding-tb-48px {
+  padding: 48px 0px 48px 0px;
+}
+
 .font-size-18px {
   font-size: 18px;
+}
+
+.font-size-24px {
+  font-size: 24px;
 }
 
 .output-result-btn {
@@ -87,5 +107,16 @@ input:focus {
   background-color: rgba(255, 255, 255, 0.18);
   color: #fff;
   padding: 8px;
+}
+
+.bmi-icon-size {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: #424242;
+  -webkit-mask: url(/img/BMICLogo.png) no-repeat;
+          mask: url(/img/BMICLogo.png) no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
 }
 /*# sourceMappingURL=BMIStyle.css.map */

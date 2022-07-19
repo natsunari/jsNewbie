@@ -16,18 +16,18 @@
 </head>
 
 <body>
-    <div class="bg-color">
-        <div class="flex flex-jcc flex-aic padding-tb-92px">
-            <img src="/img/BMICLogo.png" alt="">
-
+    <!-- 輸入數值位置 -->
+    <div class="container bg-color">
+        <div class="flex flex-jcc flex-aic padding-tb-74px">
+            <img src="/img/BMICLogo.png" alt="BMI logo">
             <div class="margin-lr">
                 <div class="padding-bottom-23px">
                     <p class="primary-color padding-bottom-8px">身高 cm</p>
-                    <input class="body-data-input" type="number" name="height" placeholder="請輸入身高" min="0">
+                    <input class="person-height body-data-input" type="number" name="height" placeholder="請輸入身高" min="0">
                 </div>
                 <div>
                     <p class="primary-color padding-bottom-8px">體重 kg</p>
-                    <input class="body-data-input" type="number" name="weight" placeholder="請輸入體重" min="0">
+                    <input class="person-weight body-data-input" type="number" name="weight" placeholder="請輸入體重" min="0">
                 </div>
             </div>
             <span class="output-result-btn primary-color-bg flex flex-jcc flex-aic font-size-18px">
@@ -35,7 +35,20 @@
             </span>
         </div>
     </div>
+    <!-- 結果顯示位置 -->
+    <div class="container padding-tb-48px">
+        <p class="flex flex-jcc flex-aic font-size-24px">BMI紀錄</p>
+        <div class="flex flex-jcc flex-aic padding-tb-18px">
+            <p>暫無紀錄</p>
+        </div>
+        <ul class="data-list"></ul>
+    </div>
+    <!-- footer -->
+    <footer class="container flex flex-jcc flex-aic primary-color-bg padding-tb-18px">
+        <span class="bmi-icon-size"></span>
+    </footer>
 
+    <script src="/js/bmi.js"></script>
 </body>
 
 </html>
