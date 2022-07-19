@@ -23,9 +23,9 @@ function operationBMI(e) {
 
   //BMI運算結果
   const BMIresult = personWeightData / (personHeightData * personHeightData); //體重除以身高公尺的二次方
-//   console.log(BMIresult);
+  console.log(BMIresult);
 
-  //for迴圈將li樣式塞入指定位置
+  //for迴圈將li樣式push到指定位置
 
 
   //最後：清空input
