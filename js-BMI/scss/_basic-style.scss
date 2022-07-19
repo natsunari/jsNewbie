@@ -1,0 +1,51 @@
+*{
+    font-family: sans-serif;
+}
+p, span{
+    margin: 0;
+}
+
+input{
+    border: none;
+    appearance:none;
+    -moz-appearance:none;
+}
+
+input:focus{
+ outline:none;
+}
+
+
+//flex排版
+.flex{
+    display: flex;
+}
+
+.flex-jcc{
+    justify-content: center;
+}
+
+.flex-aic{
+    align-items: center;
+}
+
+//padding+margin
+.margin-lr{
+    margin:0px 53px 0px 92px;
+}
+.padding-tb-92px{
+    padding: 92px 0px 92px 0px;
+}
+
+.padding-bottom-23px{
+    padding-bottom: 23px;
+}
+
+.padding-bottom-8px{
+    padding-bottom: 8px;
+}
+
+//字級
+.font-size-18px{
+    font-size: 18px;
+}

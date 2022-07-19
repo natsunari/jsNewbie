@@ -1,0 +1,22 @@
+//主要色系
+//橘色
+$primary-color:#FFD366;
+//深灰
+$dark-gray:#424242;
+//淺灰
+$light-gray:  rgba(255,255,255,0.18);
+//白色
+$white:#fff;
+
+
+//顏色
+.primary-color{
+    color: $primary-color;
+}
+
+//背景色
+.bg-color{
+    background-color: $dark-gray;
+}
+
+

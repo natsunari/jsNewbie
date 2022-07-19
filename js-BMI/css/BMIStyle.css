@@ -1,0 +1,91 @@
+.primary-color {
+  color: #FFD366;
+}
+
+.bg-color {
+  background-color: #424242;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+p, span {
+  margin: 0;
+}
+
+input {
+  border: none;
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jcc {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-aic {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.margin-lr {
+  margin: 0px 53px 0px 92px;
+}
+
+.padding-tb-92px {
+  padding: 92px 0px 92px 0px;
+}
+
+.padding-bottom-23px {
+  padding-bottom: 23px;
+}
+
+.padding-bottom-8px {
+  padding-bottom: 8px;
+}
+
+.font-size-18px {
+  font-size: 18px;
+}
+
+.output-result-btn {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #FFD366;
+  cursor: pointer;
+}
+
+.output-result-btn:hover {
+  -webkit-filter: drop-shadow(0px 0px 5px #FFD366);
+          filter: drop-shadow(0px 0px 5px #FFD366);
+}
+
+.output-result-btn:active {
+  background-color: #DEA821;
+}
+
+.body-data-input {
+  width: 250px;
+  border: 2px solid #FFD366;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  padding: 8px;
+}
+/*# sourceMappingURL=BMIStyle.css.map */
