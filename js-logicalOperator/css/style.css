@@ -1,0 +1,38 @@
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.padding-lr {
+  padding: 0 1rem;
+}
+
+.img-size {
+  width: 80px;
+}
+
+.word {
+  color: cornsilk;
+  line-height: 1.8;
+}
+
+.bgc-red {
+  background-color: brown;
+  border-radius: 8px;
+}
+
+.bgc-yellow {
+  background-color: darkgoldenrod;
+  border-radius: 8px;
+}
+/*# sourceMappingURL=style.css.map */

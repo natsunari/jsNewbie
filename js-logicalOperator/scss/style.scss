@@ -1,0 +1,32 @@
+.container{
+    max-width: 650px;
+    margin: 0 auto;
+}
+.d-flex{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.padding-lr{
+    padding: 0 1rem;
+}
+
+.img-size{
+    width: 80px;
+}
+
+.word{
+    color: cornsilk;
+    line-height: 1.8;
+}
+
+.bgc-red{
+    background-color: brown;
+    border-radius: 8px;
+}
+
+.bgc-yellow{
+    background-color:darkgoldenrod;
+    border-radius: 8px;
+}

@@ -1,0 +1,56 @@
+input {
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    outline: none; //input標籤聚焦不出現預設邊框:
+    -webkit-appearance: none; //用於IOS下移除原生樣式
+}
+
+p{
+    font-size: 14px;
+}
+
+.wrap {
+    margin: 50px auto;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.sign-up-bg{
+    background-color: rgb(205, 233, 255);
+}
+
+.input-style{
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.btn-style{
+    padding: 8px;
+    border: 1px solid rgb(205, 233, 255);
+    border-radius: 5px;
+    &:hover{
+        background-color: rgb(33, 96, 145);
+        border: 1px solid rgb(33, 96, 145);
+        color: #ffffff;
+        filter: drop-shadow(2px 2px 8px #bbc8cc);
+        cursor: pointer;
+    }
+    &:active{
+        background-color: rgb(14, 77, 126);
+    }
+}
+
+.mb-8px {
+    margin-bottom: 8px;
+}
+
+.mb-16px {
+    margin-bottom: 16px;
+}
+
+.mlr-8px{
+    margin: 0 16px;
+}

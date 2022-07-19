@@ -1,0 +1,41 @@
+.container{
+    max-width: 1000px;
+    margin:0 auto ;
+    padding: 1rem;
+    // border: 1px #000 solid;
+    line-height: 1.8;;
+    border-radius: 8px;
+    background-color: rgb(255, 234, 164);
+}
+
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+
+.d-flex-jcc{
+    justify-content: center;
+}
+.d-flex-jcsb{
+    justify-content: space-between;
+}
+
+.box{
+    padding: 1rem;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+.img-size{
+    width: 100px;
+}
+
+.img-size-2{
+    height:100px;
+}
+
+.font-style{
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(6, 143, 41);
+}

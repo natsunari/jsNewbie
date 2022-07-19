@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>炸物菜單計算</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>歡迎光臨<br>
+            <span class="shopName">KEBUKE Fried food<br>
+                可不可以來點炸物攤</span>
+        </h1>
+        <ul>
+            <li class="menu">
+                <!-- 雞排 -->
+                <span class="item">招牌雞排</span>
+                <span class="item item2">65元</span>
+                <span class="item">數量</span>
+                <input id="chickenSteakQuantityId" class="inputStyle" type="number" min="0" value="0">
+            </li>
+            <li class="menu">
+                <!-- 鹹酥雞 -->
+                <span class="item">鹹酥雞</span>
+                <span class="item item2">50元</span>
+                <span class="item">數量</span>
+                <input id="friedChickenQuantityId" class="inputStyle" type="number" min="0" value="0">
+            </li>
+            <li class="menu">
+                <!-- 甜不辣 -->
+                <span class="item">甜不辣</span>
+                <span class="item item2">30元</span>
+                <span class="item">數量</span>
+                <input id="tempuraQuantityId" class="inputStyle" type="number" min="0" value="0">
+            </li>
+            <li class="menu">
+                <!-- 飲品-紅茶 -->
+                <span class="item">飲品-紅茶</span>
+                <span class="item item2">15元</span>
+                <span class="item">數量</span>
+                <input id="blackTeaQuantityId" class="inputStyle" type="number" min="0" value="0">
+            </li>
+            <li class="menu">
+                <!-- 飲品-綠茶 -->
+                <span class="item">飲品-綠茶</span>
+                <span class="item item2">15元</span>
+                <span class="item">數量</span>
+                <input id="greenTeaQuantityId" class="inputStyle" type="number" min="0" value="0">
+            </li>
+            <li class="menu">
+                <!-- 飲品-珍奶 -->
+                <span class="item">飲品-綠茶</span>
+                <span class="item item2">15元</span>
+                <span class="item">數量</span>
+                <input id="tapiocaTeaQuantityId" class="inputStyle" type="number" min="0" value="0">
+            </li>
+            <li>
+                <button id="countButtonId" class="item2">點我看看多少錢</button>
+            </li>
+        </ul>
+        <h2 class="shopName">總金額
+            <span id="totalID"></span>
+            元
+        </h2>
+    </div>
+    <script src="/js/friedChickenPrice.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+input {
+  border: none;
+  appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+p {
+  font-size: 14px;
+}
+
+.wrap {
+  margin: 50px auto;
+  max-width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+.sign-up-bg {
+  background-color: #cde9ff;
+}
+
+.input-style {
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.btn-style {
+  padding: 8px;
+  border: 1px solid #cde9ff;
+  border-radius: 5px;
+}
+
+.btn-style:hover {
+  background-color: #216091;
+  border: 1px solid #216091;
+  color: #ffffff;
+  -webkit-filter: drop-shadow(2px 2px 8px #bbc8cc);
+          filter: drop-shadow(2px 2px 8px #bbc8cc);
+  cursor: pointer;
+}
+
+.btn-style:active {
+  background-color: #0e4d7e;
+}
+
+.mb-8px {
+  margin-bottom: 8px;
+}
+
+.mb-16px {
+  margin-bottom: 16px;
+}
+
+.mlr-8px {
+  margin: 0 16px;
+}
+/*# sourceMappingURL=220609-addAccount.css.map */

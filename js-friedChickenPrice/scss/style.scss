@@ -1,0 +1,43 @@
+.container{
+    max-width: 375px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    box-shadow:
+    0 2.9px 37.4px rgba(0, 0, 0, 0.045),
+    0 11px 69px rgba(0, 0, 0, 0.09);
+}
+h1,h2{
+    text-align: center;
+    color: #fff;
+    line-height: 1.5;
+}
+.shopName{
+    font-size: 21px;
+    font-weight: bold;
+    color: burlywood;
+}
+
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1.5rem 0rem;
+}
+
+.item{
+    margin-right: 1rem;
+    color: #fff;
+    font-size: 18px;
+}
+
+.item2{
+    margin-right: 3rem;
+}
+
+.inputStyle{
+    width: 3rem;
+    height: 1.5rem;
+}
