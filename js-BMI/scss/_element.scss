@@ -83,7 +83,7 @@
     height: 50px;
     display: inline-block;
     background-color: $dark-gray;
-    mask: url(/js-BMI/img/BMICLogo.png) no-repeat;
+    mask: url(/img/BMICLogo.png) no-repeat;
     mask-size: 100% 100%;
 }
 
@@ -110,7 +110,7 @@
 }
 
 //清除數值的icon
-.clear-icon{
+.reset-data{
     display: none;
     z-index: 1;
     position: absolute;
@@ -130,4 +130,9 @@
     }
 }
 
+
+//BMI
+.title-BMI{
+    display: none;
+}
 

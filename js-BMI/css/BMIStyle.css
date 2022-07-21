@@ -301,8 +301,8 @@ li {
   height: 50px;
   display: inline-block;
   background-color: #424242;
-  -webkit-mask: url(/js-BMI/img/BMICLogo.png) no-repeat;
-          mask: url(/js-BMI/img/BMICLogo.png) no-repeat;
+  -webkit-mask: url(/img/BMICLogo.png) no-repeat;
+          mask: url(/img/BMICLogo.png) no-repeat;
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
@@ -321,7 +321,7 @@ li {
           box-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.02), 0px 0px 5.3px rgba(0, 0, 0, 0.028), 0px 0px 10px rgba(0, 0, 0, 0.035), 0px 0px 17.9px rgba(0, 0, 0, 0.042), 0px 0px 33.4px rgba(0, 0, 0, 0.05), 0px 0px 80px rgba(0, 0, 0, 0.07);
 }
 
-.clear-icon {
+.reset-data {
   display: none;
   z-index: 1;
   position: absolute;
@@ -334,13 +334,17 @@ li {
   cursor: pointer;
 }
 
-.clear-icon:hover {
+.reset-data:hover {
   -webkit-filter: brightness(1.2);
           filter: brightness(1.2);
 }
 
-.clear-icon:active {
+.reset-data:active {
   -webkit-filter: brightness(1);
           filter: brightness(1);
+}
+
+.title-BMI {
+  display: none;
 }
 /*# sourceMappingURL=BMIStyle.css.map */

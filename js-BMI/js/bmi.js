@@ -1,14 +1,18 @@
-//設定變數
-const bodyheight = document.querySelector(".person-height");
-const bodyweight = document.querySelector(".person-weight");
+//設定dom
+const bodyHeight = document.querySelector(".person-height");
+const bodyWeight = document.querySelector(".person-weight");
 
-//按下按鈕開始運算
 const BMIresultBtnChange = document.querySelector(".output-result-btn");
-BMIresultBtnChange.addEventListener("click", addBodyBMIData, false);
 
-//清除數值按鈕
-const clearBtn = document.querySelector(".clear-icon");
-clearBtn.addEventListener("click",clearInputData,false);
+//按鈕：清除數值按鈕
+const resetBtn = document.querySelector(".reset-data");
+
+//文字
+const titleBMI = document.querySelector(".title-BMI");
+
+//結果
+const resultInnerWord = document.querySelector(".result-word");
+
 
 //紀錄項目的位置
 const BMIrecordList = document.querySelector(".data-list");
@@ -16,13 +20,22 @@ const BMIrecordList = document.querySelector(".data-list");
 //一個空的BMI紀錄，將紀錄list push 到localstorage
 const BMIRecord = JSON.parse(localStorage.getItem("BMIrecord")) || [];
 
-//新增一筆紀錄BMI的資料
+
+//監聽事件
+//開始計算BMI
+BMIresultBtnChange.addEventListener("click", addBodyBMIData, false);
+
+//清除input
+resetBtn.addEventListener("click", resetData, false);
+
+
+//function：計算BMI
 function addBodyBMIData(e) {
   e.preventDefault(); //瀏覽預設行為做清除
 
   //取出input值
-  const heightData = 0.01 * bodyheight.value; //公分轉換成公尺
-  const weightData = bodyweight.value;
+  const heightData = 0.01 * bodyHeight.value; //公分轉換成公尺
+  const weightData = bodyWeight.value;
 
   //沒輸入任何數值時直接中斷function
   if (heightData === "" || weightData === "") {
@@ -35,61 +48,62 @@ function addBodyBMIData(e) {
   console.log("BMI值為" + BMIresult);
 
   //按鈕樣式隨BMI動態變化
-  const resultInnerWord = document.querySelector(".result-word");
-  const titleBMI = document.querySelector(".title-BMI");
-  titleBMI.innerHTML = "BMI"; //出現下面BMI小字
-  titleBMI.style.display="block";
-  
+  titleBMI.style.display = "block";//讓BMI小字出現(預設none)
+
   if (BMIresult >= 40) {
+    //重度肥胖
     BMIresultBtnChange.classList.add("result-over-l-weight-btn");
     resultInnerWord.innerHTML = BMIresult;
-    clearBtn.style.display = "block";
-    clearBtn.classList.add("over-l-weight-bg");
+    resetBtn.style.display = "block";
+    resetBtn.classList.add("over-l-weight-bg");
   } else if (40 > BMIresult && BMIresult >= 35) {
+    // 中度肥胖
     BMIresultBtnChange.classList.add("result-over-m-weight-btn");
     resultInnerWord.innerHTML = BMIresult;
-    clearBtn.style.display = "block";
-    clearBtn.classList.add("over-m-weight-bg");
+    resetBtn.style.display = "block";
+    resetBtn.classList.add("over-m-weigh-bg");
   } else if (35 > BMIresult && BMIresult >= 30) {
+    //輕度肥胖
     BMIresultBtnChange.classList.add("result-over-s-weight-btn");
     resultInnerWord.innerHTML = BMIresult;
-    clearBtn.style.display = "block";
-    clearBtn.classList.add("over-s-weight-bg");
+    resetBtn.style.display = "block";
+    resetBtn.classList.add("over-s-weight-bg");
   } else if (30 > BMIresult && BMIresult >= 25) {
+    //過重
     BMIresultBtnChange.classList.add("result-over-weight-btn");
     resultInnerWord.innerHTML = BMIresult;
-    clearBtn.style.display = "block";
-    clearBtn.classList.add("over-weight-bg");
+    resetBtn.style.display = "block";
+    resetBtn.classList.add("over-weight-bg");
   } else if (25 > BMIresult && BMIresult >= 18.5) {
     //理想
     BMIresultBtnChange.classList.add("result-perfect-body-btn");
     resultInnerWord.innerHTML = BMIresult;
-    clearBtn.style.display = "block";
-    clearBtn.classList.add("perfect-body-bg");
+    resetBtn.style.display = "block";
+    resetBtn.classList.add("perfect-body-bg");
   } else {
     // 過瘦
     BMIresultBtnChange.classList.add("result-over-thin-btn");
     resultInnerWord.innerHTML = BMIresult;
-    clearBtn.style.display = "block";
-    clearBtn.classList.add("over-thin-bg");
+    resetBtn.style.display = "block";
+    resetBtn.classList.add("over-thin-bg");
   }
 
+  stopPropagation(e);
   //將運算結果儲存
   //localstorage.setItem('項目名稱',變數名稱)
-  localStorage.setItem("BMIdata", BMIresult);
+  // localStorage.setItem("BMIdata", BMIresult);
 }
 
-function clearInputData(e) {
-  //最後：清空input
-  bodyheight.value = "";
-  bodyweight.value = "";
-  clearBtn.style.display = "none";
-  BMIresultBtnChange.classList.remove("result-over-l-weight-btn","result-over-m-weight-btn","result-over-s-weight-btn","result-over-weight-btn","result-perfect-body-btn","result-over-thin-btn");
-  
-  //恢復原本樣式
-  const resultInnerWord = document.querySelector(".result-word");
-  resultInnerWord.innerHTML="看結果";
-  const titleBMI = document.querySelector(".title-BMI");
-  titleBMI.style.display="none"; //出現下面BMI小字
-
+//重置數值
+function resetData(e) {
+  bodyHeight.value = "";
+  bodyWeight.value = "";
+  resetBtn.style.display = "none";
+  resetBtn.setAttribute("class", "material-symbols-outlined reset-data");
+  titleBMI.style.display = "none";
+  BMIresultBtnChange.setAttribute("class", "output-result-btn primary-color-bg flex flex-jcc flex-aic flex-col fs-18px");
+  resultInnerWord.innerHTML = "看結果";
 }
+
+// 參考
+// https://github.com/s9220140/BMI---homework/blob/main/js/all.js
