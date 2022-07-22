@@ -1,0 +1,112 @@
+a,
+a:hover,
+a:visited,
+a:link,
+a:active {
+    color: #000;
+    text-decoration: none;
+    outline: none;
+    // a標籤的四種狀態都和本身顏色保持一致
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.containter {
+    max-width: 600px;
+    margin: 0rem auto;
+    padding: 1rem 1rem 0rem 1rem;
+    border: 1px solid rgb(221, 221, 221);
+    background-color: rgb(235, 235, 235);
+    box-shadow:
+        0 2.9px 37.4px rgba(0, 0, 0, 0.045),
+        0 11px 69px rgba(0, 0, 0, 0.09);
+}
+
+.todolist-inner-style{
+    background-color:rgb(8, 67, 115) ;
+    padding: 16px 8px;
+    color: #fff;
+    &:hover{
+        background-color:rgb(0, 44, 80) ;
+    }
+}
+
+.fz-16 {
+    font-size: 16px;
+}
+
+.p-b-16{
+    padding-bottom: 16px;
+}
+
+.m-32 {
+    margin: 32px 0px;
+}
+
+.m-l-8 {
+    margin-left: 8px;
+}
+
+.m-8{
+    margin: 0 8px;
+}
+
+.m-1rem{
+    margin: 0 -1rem;
+}
+
+.submit-btn-style,
+.dele-btn-style {
+    font-size: 14px;
+    border: 1px solid rgb(138, 138, 138);
+    border-radius: 3px;
+    padding: 4px 8px;
+    background-color: rgb(204, 232, 255);
+    border: 1px solid rgb(172, 218, 255);
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(57, 144, 210);
+        color: #fff;
+        border: 1px solid rgb(57, 144, 210);
+    }
+}
+
+.dele-btn-style {
+    font-size: 14px;
+    border: 1px solid rgb(138, 138, 138);
+    border-radius: 3px;
+    padding: 4px 8px;
+    background-color: rgb(204, 232, 255);
+    border: 1px solid rgb(172, 218, 255);
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(210, 57, 57);
+        color: #fff;
+        border: 1px solid rgb(210, 57, 57);
+    }
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-flex-grow {
+    flex-grow: 2;
+}
+
+.d-flex-align {
+    align-items: center;
+}
+
+
+.input-style {
+    padding: 4px;
+    border: 1px solid rgb(57, 144, 210);
+    // margin-bottom: 1rem;
+}

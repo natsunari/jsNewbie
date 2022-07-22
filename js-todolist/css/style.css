@@ -1,0 +1,117 @@
+a,
+a:hover,
+a:visited,
+a:link,
+a:active {
+  color: #000;
+  text-decoration: none;
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.containter {
+  max-width: 600px;
+  margin: 0rem auto;
+  padding: 1rem 1rem 0rem 1rem;
+  border: 1px solid #dddddd;
+  background-color: #ebebeb;
+  -webkit-box-shadow: 0 2.9px 37.4px rgba(0, 0, 0, 0.045), 0 11px 69px rgba(0, 0, 0, 0.09);
+          box-shadow: 0 2.9px 37.4px rgba(0, 0, 0, 0.045), 0 11px 69px rgba(0, 0, 0, 0.09);
+}
+
+.todolist-inner-style {
+  background-color: #084373;
+  padding: 16px 8px;
+  color: #fff;
+}
+
+.todolist-inner-style:hover {
+  background-color: #002c50;
+}
+
+.fz-16 {
+  font-size: 16px;
+}
+
+.p-b-16 {
+  padding-bottom: 16px;
+}
+
+.m-32 {
+  margin: 32px 0px;
+}
+
+.m-l-8 {
+  margin-left: 8px;
+}
+
+.m-8 {
+  margin: 0 8px;
+}
+
+.m-1rem {
+  margin: 0 -1rem;
+}
+
+.submit-btn-style,
+.dele-btn-style {
+  font-size: 14px;
+  border: 1px solid #8a8a8a;
+  border-radius: 3px;
+  padding: 4px 8px;
+  background-color: #cce8ff;
+  border: 1px solid #acdaff;
+  cursor: pointer;
+}
+
+.submit-btn-style:hover,
+.dele-btn-style:hover {
+  background-color: #3990d2;
+  color: #fff;
+  border: 1px solid #3990d2;
+}
+
+.dele-btn-style {
+  font-size: 14px;
+  border: 1px solid #8a8a8a;
+  border-radius: 3px;
+  padding: 4px 8px;
+  background-color: #cce8ff;
+  border: 1px solid #acdaff;
+  cursor: pointer;
+}
+
+.dele-btn-style:hover {
+  background-color: #d23939;
+  color: #fff;
+  border: 1px solid #d23939;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d-flex-grow {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.d-flex-align {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-style {
+  padding: 4px;
+  border: 1px solid #3990d2;
+}
+/*# sourceMappingURL=style.css.map */
