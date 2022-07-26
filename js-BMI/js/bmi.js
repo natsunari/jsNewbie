@@ -8,13 +8,16 @@ const resetBtn = document.querySelector(".reset-data");
 
 //文字
 const titleBMI = document.querySelector(".title-BMI");
+// const noData = document.querySelector(".noData");
 
 //結果
 const resultInnerWord = document.querySelector(".result-word");
 
 //取出localStorage的值，並轉換型別為陣列
-let localStorageData = JSON.parse(localStorage.getItem('bmiItem')) || [];
-let liList = document.querySelector(".BMIRecordList"); 
+let BMIlocalStorageData = JSON.parse(localStorage.getItem('bmiItem')) || [];
+
+//下方紀錄清單
+let BMIrecordList = document.querySelector(".BMIRecordList"); 
 
 
 //監聽事件
@@ -31,7 +34,7 @@ function addBodyBMIData(e) {
   //取出input值
   const heightData = bodyHeight.value;
   const weightData = bodyWeight.value;
-  let bodyState = "";
+  let bodyState = "";//標註身體BMI狀態
 
   //BMI運算結果
   const BMIresult = (weightData /(heightData * 0.01 * heightData * 0.01)).toFixed(2); //.toFixed(2) => 僅顯示到小數點後2位
@@ -46,6 +49,7 @@ function addBodyBMIData(e) {
   //按鈕樣式隨BMI動態變化
   titleBMI.style.display = "block"; //讓BMI小字出現(預設none)
   resetBtn.style.display = "block"; //讓重製按鈕出現(預設none)
+  // noData.style.display="none";
   resultInnerWord.innerHTML = BMIresult;
 
   if (BMIresult >= 40) {
@@ -82,18 +86,16 @@ function addBodyBMIData(e) {
 
   // 儲存到localStorage
   //先設計localstorge的資料格式
-  const bmiArray = {
+  const bmiDetailData = {
     height: heightData,
     weight: weightData,
     BMI: BMIresult,
     state: bodyState,
-    stateColor: bmiStateColor,//改變顏色
   };
 
-  localStorageData.push(bmiArray);//將對應的bmiArray數值push到localStorageData內
-  const localStorageDataStr = JSON.stringify(localStorageData);//getItem轉換型別為字串
-  localStorage.setItem('bmiItem', localStorageDataStr);//localStorage只能儲存字串
-
+  BMIlocalStorageData.push(bmiDetailData);//將對應的bmiDetailData數值push到BMIlocalStorageData內
+  const BMIlocalStorageDataStr = JSON.stringify(BMIlocalStorageData);//getItem轉換型別為字串
+  localStorage.setItem('bmiItem', BMIlocalStorageDataStr);//localStorage只能儲存字串
 
   update();
 
@@ -101,20 +103,19 @@ function addBodyBMIData(e) {
 
 //update Record List 新增資料在下方
 
-
 function update(){
   let bmiDateRecordList = "";//先設定空的字串，預計放入for迴圈的li
-  for(let i=0; i < localStorageData.length;i++){
-    console.log('update');
+  for(let i=0; i < BMIlocalStorageData.length ; i++){
+    // console.log('update');
     bmiDateRecordList +=`<li class="flex flex-aic bmi-record-card mb-16">
-    <span class="bmi-perfect bmi-mark"></span>
-    <p class="ptb-20px mr-40px fs-20px">${localStorageData[i].state}</p>
+    <span class="bmi-mark bmi-perfect"></span>
+    <p class="ptb-20px mr-40px fs-20px">${BMIlocalStorageData[i].state}</p>
     <span class="fs-12px ml-30px mr-8px">BMI</span>
-    <p class="fs-20px mr-42px">${localStorageData[i].BMI}</p>
+    <p class="fs-20px mr-42px">${BMIlocalStorageData[i].BMI}</p>
     <span class="fs-12px mr-8px">height</span>
-    <p class="fs-20px mr-42px">${localStorageData[i].height+"cm"}</p>
+    <p class="fs-20px mr-42px">${BMIlocalStorageData[i].height+"cm"}</p>
     <span class="fs-12px mr-8px">weight</span>
-    <p class="fs-20px mr-42px">${localStorageData[i].weight+"kg"}</p>
+    <p class="fs-20px mr-42px">${BMIlocalStorageData[i].weight+"kg"}</p>
     <span class="fs-12px mr-8px">06-19-2017</span>
     <a href="#" class="mr-8px p-8px">
         <span class="material-symbols-outlined">
@@ -123,7 +124,7 @@ function update(){
     </a>
 </li>`;
   }
-  liList.innerHTML = bmiDateRecordList;
+  BMIrecordList.innerHTML = bmiDateRecordList;
 }
 
 
@@ -134,7 +135,8 @@ function resetData(e) {
   bodyWeight.value = "";
   resetBtn.style.display = "none";
   resetBtn.setAttribute("class", "material-symbols-outlined reset-data");
-  titleBMI.style.display = "none";
+  // titleBMI.style.display = "none";
+  noData.style.display="block";
   BMIresultBtnChange.setAttribute(
     "class",
     "output-result-btn primary-color-bg flex flex-jcc flex-aic flex-col fs-18px"
